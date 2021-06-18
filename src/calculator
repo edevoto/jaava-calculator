@@ -1,0 +1,62 @@
+package com.company;
+import  java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+
+	    System.out.println("Choose your operation:");
+	    System.out.println("Press 1 for sum");
+        System.out.println("Press 2 for subtract");
+        System.out.println("Press 3 for multiply");
+        System.out.println("Press 4 for divide");
+        System.out.println("Press 5 for root square");
+
+        int choose = scan.nextInt();
+        System.out.println("Enter two numbers");
+        int num1 =scan.nextInt();
+        int num2 = scan.nextInt();
+
+        if(choose == 1){
+            System.out.println("The sum of this numbers is: " + Sum(num1,num2));
+        }else if(choose == 2){
+            System.out.println("The subtraction of this numbers is: " + Subtract(num1,num2));
+        }else if(choose == 3){
+            System.out.println("The multiplication of this numbers is: " + Multiply(num1,num2));
+        }else if(choose == 4){
+            System.out.println("The division of this numbers is: " + Divide(num1,num2));
+        }else if(choose == 5){
+            System.out.println("The root square of this numbers is: " + Sqrt(num1));
+        }else{
+            System.out.println("Enter some valid numbers");
+        }
+    }
+
+
+    public static int Sum (int num1 ,int num2){
+        int num;
+        num= num1+num2;
+        return num;
+    }
+    public static int Subtract (int num1 ,int num2){
+        int num;
+        num= num1-num2;
+        return num;
+    }
+    public static int Multiply (int num1 ,int num2){
+        int num;
+        num= num1*num2;
+        return num;
+    }
+    public static int Divide (int num1 ,int num2){
+        int num;
+        num= num1/num2;
+        return num;
+    }
+    public static int Sqrt (int num1){
+        int num;
+        num= (int)Math.sqrt(num1);
+        return num;
+    }
+
+}
